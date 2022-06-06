@@ -1,0 +1,21 @@
+@use "globales" as *;
+
+.banner--homepage {
+	margin-bottom: 20px;
+	padding: 50px;
+	max-inline-size: 300px;
+	border-radius: 20px;
+	background-color: $color-secundario;
+	color: $color-claro;
+	h3 {
+		@include font-size(20px);
+		@include titulos($Fuente2);
+	}
+	.button {
+		padding: 10px;
+		block-size: 50px;
+		border: 2px solid $color-claro;
+		@include font-size(18px);
+		@include titulos($Fuente2);
+	}
+}

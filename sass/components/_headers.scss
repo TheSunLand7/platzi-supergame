@@ -1,0 +1,51 @@
+@use "../abstracts" as *;
+@use "breakpoints" as *;
+.header--principal {
+	margin-bottom: 20px;
+	padding: 0 20px 20px 20px;
+	inline-size: 100%;
+	block-size: 90px;
+	display: flex;
+	border-bottom: 1px solid #ebebeb;
+}
+
+.nav--header ul {
+	padding-top: 35px;
+	display: none;
+	li {
+		margin-right: 50px;
+		list-style-type: none;
+	}
+
+	a {
+		color: $color-variacion;
+		@include titulos($Fuente2);
+	}
+
+	@include media(desktop-s) {
+		display: flex;
+	}
+}
+
+.header__busqueda {
+	margin-left: auto;
+	padding-top: 35px;
+	display: none;
+	&:hover {
+		text-decoration: none;
+	}
+
+	i {
+		margin-right: 10px;
+		font-size: 20px;
+		color: $color-secundario;
+	}
+	span {
+		color: $color-variacion;
+		@include titulos($Fuente2);
+	}
+
+	@include media(desktop-s) {
+		display: flex;
+	}
+}

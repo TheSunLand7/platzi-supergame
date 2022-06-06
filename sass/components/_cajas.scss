@@ -1,0 +1,105 @@
+@use "../abstracts" as *;
+.contenedor--cajas {
+	max-width: 1400px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.caja {
+	max-width: 430px;
+	@include caja;
+	&__contenido {
+		padding: 25px;
+		background-color: $color-claro;
+	}
+	&__categoria {
+		color: $color-secundario;
+		@include titulos($Fuente2);
+	}
+}
+
+.contenedor--cajas .caja a {
+	text-decoration: none;
+	color: $color-variacion;
+	@include titulos($Fuente2);
+}
+
+.contenido {
+	margin-bottom: 40px;
+	justify-content: space-evenly;
+	display: flex;
+	width: 90%;
+	margin: 0 auto;
+	padding: 30px 0;
+}
+
+.caja--con-fondo {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	background-color: $color-primario;
+	box-shadow: none;
+	img {
+		position: absolute;
+		max-inline-size: 100%;
+		max-block-size: auto;
+		display: block;
+		opacity: 0.5;
+		object-fit: contain;
+	}
+	&__contenido {
+		position: absolute;
+		padding: 20px;
+		text-align: center;
+		color: $color-claro;
+		p {
+			color: $color-claro;
+		}
+		h3 {
+			color: $color-claro;
+		}
+	}
+
+	&__categoria {
+		margin: 0 auto;
+		inline-size: auto;
+		max-inline-size: 100px;
+		display: block;
+		text-align: center;
+		background-color: $color-secundario;
+		color: $color-claro;
+		@include titulos($Fuente2);
+	}
+}
+
+.caja--grande {
+	margin-right: 20px;
+	max-inline-size: 1000px;
+	block-size: 550px;
+	border-radius: 20px;
+	h2 {
+		@include titulos($Fuente2);
+		@include font-size(50px);
+	}
+	.caja--con-fondo__contenido {
+		padding-top: 200px;
+		p {
+			font-weight: normal;
+			text-transform: none;
+			@include titulos($Fuente1);
+		}
+	}
+}
+
+.caja--mediana {
+	max-inline-size: 600px;
+	block-size: 250px;
+	border-radius: 20px;
+}
+
+.caja--pequena {
+	max-inline-size: 300px;
+	block-size: 250px;
+	border-radius: 20px;
+}

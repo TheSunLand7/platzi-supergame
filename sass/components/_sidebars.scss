@@ -1,0 +1,36 @@
+@use "globales" as *;
+
+.sidebar--listado {
+	max-inline-size: 300px;
+	padding: 20px;
+	border-radius: 20px;
+	@include caja();
+	h3 {
+		@include font-size(20px);
+		@include titulos($Fuente2);
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+	}
+	li {
+		padding: 10px 0;
+		margin: 10px 0;
+		border-top: 1px solid #ccc;
+		list-style-type: none;
+	}
+	a {
+		display: flex;
+		padding: 10px 20px;
+		color: $color-primario;
+		font-weight: 600;
+		text-transform: none;
+		@include titulos($Fuente1);
+	}
+	&__numero {
+		margin-right: 20px;
+		color: get-opacity($color-primario, 0.5);
+	}
+}
