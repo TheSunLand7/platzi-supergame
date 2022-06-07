@@ -58,6 +58,21 @@ main {
     grid-template-rows: 1fr 1fr 1fr 1fr;
   }
 }
+@media only screen and (max-width: 768px) {
+  .contenedor--home {
+    padding: 0 20px 20px 20px;
+    display: grid;
+    grid-template: repeat(4, max-content)/1fr;
+    gap: 20px;
+    block-size: auto;
+  }
+  .contenedor--home .caja-ff,
+.contenedor--home .caja-xbox,
+.contenedor--home .caja-zelda,
+.contenedor--home .caja-fortnite {
+    display: none;
+  }
+}
 
 .caja--grande {
   -ms-grid-row: 1;
@@ -66,6 +81,13 @@ main {
   -ms-grid-column: 1;
   -ms-grid-column-span: 3;
   grid-column: 1/4;
+}
+@media only screen and (max-width: 768px) {
+  .caja--grande {
+    grid-row: 1;
+    grid-column: 1;
+    margin: 0;
+  }
 }
 
 .banner--homepage {
@@ -76,6 +98,12 @@ main {
   -ms-grid-column-span: 1;
   grid-column: 4/5;
 }
+@media only screen and (max-width: 768px) {
+  .banner--homepage {
+    grid-row: 4;
+    grid-column: 1;
+  }
+}
 
 .sidebar--listado {
   -ms-grid-row: 3;
@@ -84,6 +112,12 @@ main {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-column: 1/2;
+}
+@media only screen and (max-width: 768px) {
+  .sidebar--listado {
+    grid-row: 2;
+    grid-column: 1;
+  }
 }
 
 .caja-zelda {
@@ -102,6 +136,13 @@ main {
   -ms-grid-column: 4;
   -ms-grid-column-span: 1;
   grid-column: 4/5;
+}
+@media only screen and (max-width: 768px) {
+  .caja-rdr2 {
+    grid-row: 3;
+    grid-column: 1;
+    max-inline-size: 100%;
+  }
 }
 
 .caja-ff {

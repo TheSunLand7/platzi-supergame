@@ -1,5 +1,7 @@
 @use "../abstracts" as *;
 @use "breakpoints" as *;
+@use "grids" as *;
+
 .header--principal {
 	margin-bottom: 20px;
 	padding: 0 20px 20px 20px;
@@ -7,6 +9,25 @@
 	block-size: 90px;
 	display: flex;
 	border-bottom: 1px solid #ebebeb;
+	.logo--header i {
+		display: none;
+	}
+	@include media(mobile-only) {
+		padding: 0 20px 20px;
+		.logo--header {
+			inline-size: 100%;
+			display: grid;
+			place-items: center;
+			@include grid-template-columns(2fr 1fr);
+		}
+		.logo--header img {
+			inline-size: 100%;
+		}
+
+		.logo--header i {
+			display: block;
+		}
+	}
 }
 
 .nav--header ul {

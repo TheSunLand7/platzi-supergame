@@ -1,4 +1,5 @@
 @use "globales" as *;
+@use "breakpoints" as *;
 
 .sidebar--listado {
 	max-inline-size: 300px;
@@ -32,5 +33,12 @@
 	&__numero {
 		margin-right: 20px;
 		color: get-opacity($color-primario, 0.5);
+	}
+
+	@include media(mobile-only) {
+		max-inline-size: 100%;
+		h3 {
+			margin-bottom: 30px;
+		}
 	}
 }

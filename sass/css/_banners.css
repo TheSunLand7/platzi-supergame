@@ -38,6 +38,8 @@ main {
   height: 100vh;
 }
 
+/* Media Queries Mixin
+**********************/
 .banner--homepage {
   margin-bottom: 20px;
   padding: 50px;
@@ -64,4 +66,17 @@ main {
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   font-weight: 700;
+}
+@media only screen and (max-width: 768px) {
+  .banner--homepage {
+    max-inline-size: 100%;
+  }
+  .banner--homepage h3 {
+    font-size: 30px;
+    font-size: 1.875rem;
+    line-height: 2.8125rem;
+  }
+  .banner--homepage p {
+    margin: 60px 0;
+  }
 }

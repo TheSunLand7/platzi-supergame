@@ -48,6 +48,27 @@ main {
   display: flex;
   border-bottom: 1px solid #ebebeb;
 }
+.header--principal .logo--header i {
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  .header--principal {
+    padding: 0 20px 20px;
+  }
+  .header--principal .logo--header {
+    inline-size: 100%;
+    display: grid;
+    place-items: center;
+    -ms-grid-columns: 2fr 1fr;
+    grid-template-columns: 2fr 1fr;
+  }
+  .header--principal .logo--header img {
+    inline-size: 100%;
+  }
+  .header--principal .logo--header i {
+    display: block;
+  }
+}
 
 .nav--header ul {
   padding-top: 35px;

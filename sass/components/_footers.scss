@@ -1,4 +1,6 @@
 @use "../abstracts" as *;
+@use "breakpoints" as *;
+@use "globales" as *;
 
 .footer--principal {
 	margin-top: 30px;
@@ -6,6 +8,10 @@
 	block-size: 160px;
 	display: flex;
 	background-color: $color-primario;
+	@include media(mobile-only) {
+		block-size: 500px;
+		flex-direction: column;
+	}
 }
 
 .nav--footer ul {
@@ -19,10 +25,35 @@
 		color: $color-claro;
 		@include titulos($Fuente2);
 	}
+	@include media(mobile-only) {
+		display: block;
+		padding-left: 0;
+		a {
+			font-weight: normal;
+			color: get-opacity($color-claro, 0.7);
+			@include font-size(14px);
+			letter-spacing: 2px;
+		}
+	}
 }
 
 .nav--social {
 	margin-left: auto;
+	@include media(mobile-only) {
+		margin-left: 0;
+		ul {
+			padding-left: 0;
+		}
+		li {
+			margin-right: 30px;
+			color: get-opacity($color-claro, 0.7);
+			@include font-size(14px);
+		}
+		a {
+			color: get-opacity($color-claro, 0.7);
+			@include font-size(13px);
+		}
+	}
 }
 ul {
 	padding-top: 35px;

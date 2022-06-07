@@ -14,21 +14,47 @@
 		@include grid-template-columns(1fr grid-repeat(3));
 		@include grid-template-rows(1fr grid-repeat(3));
 	}
+	@include media(mobile-only) {
+		padding: 0 20px 20px 20px;
+		display: grid;
+		grid-template: repeat(4, max-content) / 1fr;
+		gap: 20px;
+		block-size: auto;
+		.caja-ff,
+		.caja-xbox,
+		.caja-zelda,
+		.caja-fortnite {
+			display: none;
+		}
+	}
 }
 
 .caja--grande {
 	@include grid-row(1, 3);
 	@include grid-column(1, 4);
+	@include media(mobile-only) {
+		grid-row: 1;
+		grid-column: 1;
+		margin: 0;
+	}
 }
 
 .banner--homepage {
 	@include grid-row(2, 4);
 	@include grid-column(4, 5);
+	@include media(mobile-only) {
+		grid-row: 4;
+		grid-column: 1;
+	}
 }
 
 .sidebar--listado {
 	@include grid-row(3, 5);
 	@include grid-column(1, 2);
+	@include media(mobile-only) {
+		grid-row: 2;
+		grid-column: 1;
+	}
 }
 
 .caja-zelda {
@@ -39,6 +65,11 @@
 .caja-rdr2 {
 	@include grid-row(1, 2);
 	@include grid-column(4, 5);
+	@include media(mobile-only) {
+		grid-row: 3;
+		grid-column: 1;
+		max-inline-size: 100%;
+	}
 }
 
 .caja-ff {

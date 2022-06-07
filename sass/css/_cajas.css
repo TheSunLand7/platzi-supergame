@@ -38,6 +38,8 @@ main {
   height: 100vh;
 }
 
+/* Media Queries Mixin
+**********************/
 .contenedor--cajas {
   max-width: 1400px;
   margin: 0 auto;
@@ -117,6 +119,28 @@ main {
   text-transform: uppercase;
   font-weight: 700;
 }
+@media only screen and (max-width: 768px) {
+  .caja--con-fondo img {
+    block-size: 100%;
+    object-fit: cover;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .caja--con-fondo__stats {
+    display: flex;
+    inline-size: 100%;
+    block-size: 50px;
+    justify-content: center;
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.3125rem;
+  }
+  .caja--con-fondo__stats ul {
+    align-items: center;
+    padding-top: 0;
+    margin: 0;
+  }
+}
 
 .caja--grande {
   margin-right: 20px;
@@ -139,6 +163,19 @@ main {
   font-weight: normal;
   text-transform: none;
   font-family: "Lato", sans-serif;
+}
+@media only screen and (max-width: 768px) {
+  .caja--grande .caja--con-fondo__contenido {
+    padding-top: 150px;
+  }
+  .caja--grande .caja--con-fondo__contenido p {
+    display: none;
+  }
+  .caja--grande .caja--con-fondo__contenido h2 {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 }
 
 .caja--mediana {
